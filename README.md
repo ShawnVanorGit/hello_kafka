@@ -2,13 +2,10 @@
 
 **1. 一个消费者**从一个Topic中消费数据 ：
 
-![img](//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c97a6361311f411f971b917391d8bb2c~tplv-k3u1fbpfcp-zoom-1.image)
-
 **2. 消费者群组 :**
 
 当生产者向 Topic 写入消息的速度超过了现有消费者的处理速度，此时需要对消费者进行横向伸缩，用多个消费者从同一个主题读取消息，对消息进行分流。**同一个分区不能被一个组中的多个 consumer 消费。**
 
-![two](//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ee85ef484b384cb985d8b43954f4f21c~tplv-k3u1fbpfcp-zoom-1.image)
 ### Kafka消费者代码样例
 
 读取Kafka消息只需要创建一个KafkaConsumer，除此之外还需要使用四个基本属性，bootstrap.servers、key.deserializer、value.deserializer和group.id。
