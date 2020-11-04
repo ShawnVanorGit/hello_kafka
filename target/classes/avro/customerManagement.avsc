@@ -1,0 +1,10 @@
+{
+    "schema": "{
+           \"type\": \"record\",
+           \"name\": \"Customer\",
+           \"fields\":[
+               {\"name\": \"id\", \"type\": \"string\"},
+               {\"name\": \"name\",  \"type\": \"string\"}
+           ]
+    }"
+}
